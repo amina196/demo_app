@@ -1,4 +1,24 @@
 DemoApp::Application.routes.draw do
+  
+
+
+  resources :microposts
+
+#defined a user resource, for handling the following requests : 
+# GET /users maps to #index action in users_controller.rb and renders /users/index.html
+# GET /users/1 maps to #show action in users_controller.rb and renders /users/show.html
+# GET /users/new maps to #new action in users_controller.rb and renders /users/new.html
+# GET /users/1/edit maps to #edit action in users_controller.rb and renders /users/edit.html
+
+# POST /users maps to #create action in users_controller.rb and redirects to /users/show.html
+# PUT /users/1  maps to #update action in users_controller.rb and redirects to /users/show.html
+# DELETE  /users/1 maps to #destroy action in users_controller.rb and redirects to /users/index.html
+  resources :users
+
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
